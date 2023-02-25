@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Alex Iqbal</title>
+<link rel="stylesheet" href="styles.css">
+
+
+
+<meta name="description" content="alex iqbal's resume and potfolio site">
+<meta name="keywords" content="alex iqbal resume portfolio ucsd">
+</head>
+<body>
+<main>
+
+
+    <section id="intro-container">
+        <header>
+            <h1 id="alex-header">Alex Iqbal</h1>
+            <figure>
+
+                <picture>
+                    <source media="(max-width: 600px)"
+                    srcset="./alex-selfie3.jpg">
+                    <source media="(max-width: 800px)"
+                    srcset="./alex-selfie2.jpg">
+                    <source media="(min-width: 1100px)"
+                    srcset="./alex-selfie.jpg">
+                    <img id="alex-selfie" src="./alex-selfie.jpg" alt="Selfie of Alex Iqbal">
+                </picture>
+                
+                <br>
+                <br>
+                 <p>Hover over for a better look at my face ;) P.S It changes depending on size</p>
+            </figure>
+            <h3>Goal</h3>
+            <p class="introP">
+                I plan on getting a Software Engineering internship sometime this year. It can either be anytime this year. Either summer or fall. 
+            </p>
+            <p class="introP">
+                From this potential internship, I am hoping to apply my new knowledge of web development and get better at it.  
+            </p>
+
+
+            <h3>Purpose</h3>
+            <p class="introP">
+                List out
+                my experience in the tech industry and to demonstrate meaningful projects.
+            </p>
+
+        </header>
+    </section>
+
+
+<br>
+
+
+    <section id="skills-container">
+
+        <h2 class="header">Skills</h2>
+
+
+          <table class="intro">
+            <caption>Tech Related Skills</caption>
+            <colgroup>
+              <col style="background-color:#F0FFFF	">
+              <col style="background-color:#A7C7E7	">
+            </colgroup>
+            <tr>
+              <th>Technologies</th>
+              <th>Specfications</th>
+   
+            </tr>
+            <tr>
+              <td>Programming Languages</td>
+              <td>
+                <p>Ranking the languages from my strongest to weakest</p>
+                <ol>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>Javascript</li>
+                  </ol>
+              </td>
+
+            </tr>
+            <tr>
+              <td>Software</td>
+              <td>
+                <ul>
+                    <li>Microsft Office Suite</li>
+                    <li>Unix Terminal</li>
+                </ul>
+              </td>
+
+            </tr>
+          </table>
+    </section>
+<hr>
+
+<section id="education-container">
+
+    <h2 class="header">Education</h2>
+
+
+
+    <b>Bachelor of Science (B.S.) in Computer Science and Engineering</b>
+    <p>University of California, San Diego, CA</p>
+    <i>September 2019 - December 2023</i>
+
+    <aside>
+        <figure>
+            <picture>
+                <img src="https://download.logo.wine/logo/University_of_California%2C_San_Diego/University_of_California%2C_San_Diego-Logo.wine.png" width="300" height="250" alt="ucsd" >
+              </picture>
+              <cite><a href="https://logotyp.us/logo/ucsd/" target="_blank">logotyp</a></cite>
+              <figcaption>
+                <p><strong>Ranked 11th place for best CS schools</strong> acording to <em>US News</em> </p>
+                <p><a href="https://www.usnews.com/best-graduate-schools/top-science-schools/computer-science-rankings?_sort=rank-asc">Click here to read more...</a></p>
+              </figcaption>
+           
+        </figure>
+    </aside>
+
+</section>
+
+
+<hr>
+<section id="fun-facts-container">
+<h3 class="header">Fun Facts about Me</h3>
+<ul>
+    <li><code>style</code> is my favorite HTML tag as it can improve the looks of this site...</li>
+    <li>I like eating olives from a can during a long drive</li>
+    <li>I like ketchup in my pho...</li>
+    <li>My favorite song: 
+        <br>
+        <audio controls>
+            <source src="Nevergonnagiveyouup.mp3" type="audio/mp3">
+          </audio>
+    </li>
+    <li>
+        My favorite anime intro: 
+        <br>
+        <video width="500" height="500" controls>
+            <source src="UCSD-CS-Anime-OP.mp4" type="video/mp4">
+          </video>
+    </li>
+    <li>
+        My favorite coder:
+        <br>
+        <iframe height=900 width=600
+        src="https://twitframe.com/show?url=https://twitter.com/wangoes_tech/status/1560183544650993665?s=20&t=FybZzlrrtr34vbpY60M4-A"></iframe>
+    </li>
+    <li>
+        My favorite canvas:
+        <br>
+        <canvas id="circle" class="intro" width="200" height="100"></canvas>
+    </li>
+    <li>
+        My favorite SVG:
+        <br>
+        <svg id="star" width="200" height="200">
+            <polygon points="100,15 40,250 190,90 15,90 160,250" />
+        </svg>
+    </li>
+  </ul>
+
+
+</section>
+<hr>
+
+<section id="contact-container">
+<h3 class="header">Contact Me</h3>
+
+<div>
+    <form id="contact-form">
+        <fieldset>
+            <legend>Fill this out to contact me</legend>
+
+            <label>Full Name</label>
+            <input type="text" placeholder="Bob Jones">
+            <br>
+            <label>Email</label>
+            <input type="text" placeholder="example@example.com">
+            <br>
+            <label>Country</label>
+            <select name="country">
+                <optgroup label="North America">
+                    <option>USA</option>
+                    <option>Canada</option>
+                </optgroup>
+                <optgroup label="Europe">
+                    <option>Russia</option>
+                </optgroup>
+      
+            </select>
+            <br>
+            <label>Are you a recruiter?</label>
+            <input list="recruiters">
+            <datalist id="recruiters">
+                <option value="Yes">
+                <option value="No">
+            </datalist>
+            <br>
+            <label>Subject</label>
+            <br>
+            <textarea cols="30" rows="10" placeholder="..."></textarea>
+            <br>
+            <button type="button">Submit</button>
+
+        </fieldset>
+
+
+    </form>
+</div>
+
+<p>If you do not want to contact me through this site, you can reach out to my different social medias</p>
+
+<nav>
+<a href="">Linkedin</a> |
+<a href="">Instagram</a> |
+<a href="">Facebook</a> |
+<a href="">MySpace</a>
+</nav>
+
+
+</section>
+<hr>
+</main>
+<br>
+<footer>
+        <p>Developer: Alex Iqbal</p>
+        <p>Class: CSE 134</p>
+
+</footer>
+<script>
+    var circleId = document.getElementById("circle");
+    var circleDraw = circleId.getContext("2d");
+    circleDraw.beginPath();
+    circleDraw.arc(95,50,40,0,2*Math.PI);
+    circleDraw.stroke();
+    </script>
+</body>
+
+
+
+</html>

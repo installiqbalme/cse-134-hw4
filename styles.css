@@ -1,0 +1,200 @@
+:root {
+    --borderDec: dotted;
+    --niceBlue: #bfecf7;
+    --hotPink: #f500836b;
+    --cursiveFont: 'Snell Roundhand', cursive;
+    --shadow: 1px 1px 1px #333;
+    --headerFontSize: 75px;
+    --subHeadingFontSize: 37.5px;
+    --pFontSize: 18.75px;
+    --mountainRockA: #868F96;
+    --mountainRockB: #596164;
+    --eternalConstanceA: #09203F;
+    --eternalConstanceB: #537895;
+    --juicyPeachA: #FFECD2;
+    --juicyPeachB: #FCB69F;
+    --plumPlateA: #764BA2;
+    --plumPlateB: #667EEA;
+    --sanguineA: #D4145A;
+    --sanguineB: #FBB03B;
+
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    font-family: 'Georgia', serif;
+
+}
+
+hr {
+    background: linear-gradient(var(--mountainRockA), var(--mountainRockB));
+    height: 3px;
+}
+
+#alex-selfie {
+    border: 5px solid #FFF;
+    box-shadow: var(--shadow);
+    border-radius: 4px;
+    width: 25em;
+    transition: width 4s, height 4s;
+}
+
+@media (hover: hover) {
+    #alex-selfie:hover {
+
+        width: 40em;
+    }
+
+}
+#alex-selfie:hover {
+
+    width: 40em;
+}
+
+
+#intro-container {
+    height: 100%;
+    width: 100%;
+    color: #FFF;
+    text-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    background: linear-gradient( to bottom right, var(--niceBlue) 50%,  var(--hotPink) 100%);
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+    border-radius: 0 0 85% 85% / 10%;
+    text-align: center;
+    animation-duration: 5s;
+    animation-name: gradient-change;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+
+
+}
+
+@keyframes gradient-change {
+    0% {
+        background: linear-gradient(to bottom right, var(--niceBlue) 100%,var(--niceBlue) 100% );
+    }
+    50% {
+        background: linear-gradient(to bottom right, var(--hotPink) 100%, var(--hotPink) 100% );
+    }
+    100% {
+        background: linear-gradient( to bottom right, var(--niceBlue) 50%,  var(--hotPink) 100%);
+    }
+}
+
+
+
+
+    
+
+#alex-header {
+    font-family: var(--cursiveFont);
+    font-size: var(--headerFontSize);
+    margin-bottom: 2.5%;
+    animation-duration: 5s;
+    animation-name: intro-header-fade;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes intro-header-fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h3 {
+    font-family: var(--cursiveFont);
+    margin-bottom: 2.5%;
+    font-size: var(--subHeadingFontSize);
+}
+ p {
+
+    font-size: var(--pFontSize);
+    margin-bottom: 35px;
+}
+
+li {
+    font-size: var(--pFontSize);
+    margin-bottom: 35px;
+}
+
+
+
+#star {
+    transform: rotate(180deg);
+}
+
+#skills-container {
+
+    color: #FFF;
+    text-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( to bottom right, var(--mountainRockA) 50%,  var(--mountainRockB) 100%);
+    text-align: center;
+    flex-direction: column;
+
+
+}
+
+.header {
+    font-family: var(--cursiveFont);
+    font-size: var(--headerFontSize);
+    margin-bottom: 2.5%;
+}
+
+#education-container {
+
+    color: #FFF;
+    text-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( to bottom right, var(--juicyPeachA) 50%,  var(--juicyPeachB) 100%);
+    text-align: center;
+    flex-direction: column;
+}
+
+#fun-facts-container {
+    color: #FFF;
+    text-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( to bottom right, var(--plumPlateA) 50%,  var(--plumPlateB) 100%);
+    text-align: center;
+    flex-direction: column;
+}
+
+#contact-container {
+    color: #FFF;
+    text-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( to bottom right, var(--sanguineA) 50%,  var(--sanguineB) 100%);
+    text-align: center;
+    flex-direction: column;
+}
+
+
+
