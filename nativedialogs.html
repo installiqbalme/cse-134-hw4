@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<title>Native Dialogs</title>
+<meta name="description" content="bunch of buttons">
+<meta name="keywords" content="html tutorial template">
+</head>
+<body>
+<section>
+    <h1>Simple Dialog?</h1>
+    <button id="alert">Alert </button>
+    <!-- <br>
+    <label for="ticketQuantity">Confirm how many tickets? (between 1 and 5):</label>
+    <input type="number" id="ticketQuantity" name="ticketQuantity" min="1" max="5">
+    <br>  -->
+    <button id="confirm">Confirm</button>
+<!-- 
+    <output id="outText" for="output" for="ticketQuantity">
+    </output> -->
+    <button id="prompt">Prompt</button>
+    <button id="saferprompt">Safer Prompt</button>
+    <hr>
+    <output id="outText">
+
+    </output>
+<hr>
+</section>
+<br>
+<section>
+    <h1>Custom Dialog?</h1>
+
+    <button id="alertC">Alert (customdialog) </button>
+    <button id="confirmC">Confirm (customdialog)</button>
+    <button id="promptC">Prompt (customdialog)</button>
+    <hr>
+    <output id="outText2">
+
+    </output>
+
+</section>
+
+<dialog id="customAlert">
+
+    <p><b id="customAlertP">ALERT</b></p>
+    <br>
+    <button id="okBtnAlertC">Ok</button>
+
+</dialog>
+
+<dialog id="customConfirm">
+
+    <label for="customConfirmPrompt">Do you confirm this?</label>
+    <br> 
+    <button id="cancelBtnConfirmC">Cancel</button>
+    <button id="okBtnConfirmC">Ok</button>
+
+</dialog>
+
+<dialog id="customPrompt">
+
+    <label for="promptText">What is yout name?:</label>
+    <input type="text" id="promptTextC" name="promptText">
+    <br> 
+    <button id="cancelBtnPromptC">Cancel</button>
+    <button id="okBtnPromptC">Ok</button>
+
+</dialog>
+
+
+
+</body>
+
+<script>
+
+    //NATIVE DIALOG
+
+    //The alert button is stored in alertBtn
+    const alertBtn = document.getElementById("alert");
+    //The prompt button is stored in promptBtn
+    const promptBtn = document.getElementById("prompt"); 
+    //the confirm button is stored in confirmBtn
+    const confirmBtn = document.getElementById("confirm");
+    //the safe prompt button is stored in safePromptBtn
+    const safePromptBtn = document.getElementById("saferprompt");
+    //the output text is stored in outText
+    const outText = document.getElementById("outText");
+
+    //CUSTOM DIALOG
+
+    //The alert button is stored in alertBtnC
+    const alertBtnC = document.getElementById("alertC");
+    //The prompt button is stored in promptBtn
+    const promptBtnC = document.getElementById("promptC"); 
+    //the confirm button is stored in confirmBtn
+    const confirmBtnC = document.getElementById("confirmC");
+    //the output2 text is stored in outText
+    const outText2 = document.getElementById("outText2");
+
+    //NATIVE DIALOG EVENT
+    //handler for event listener coresponding to alert
+    function alertHandler() {
+
+        alert("alert");
+
+    }
+    alertBtn.addEventListener("click", alertHandler);
+
+    //handler for event listener coresponding to alert
+    
+    function promptHandler() {
+
+        let answer = prompt("What is your name?");
+        let text;
+
+        if(answer == "") {
+            outText.innerHTML = `Prompt result: User did not enter anything`;
+        }
+        else if (answer == null) {
+            return;
+        } 
+
+        else {
+    //Inputting the name...which can output cross attacks
+        outText.innerHTML = `Prompt result: ${answer}`;
+        }
+        
+}
+
+    promptBtn.addEventListener("click", promptHandler);
+
+
+    confirmBtn.addEventListener("click", () => {
+
+        let confirmStatus = confirm("Do you confirm this?")
+        //checks if ok got pressed
+        if(confirmStatus == true) {
+            outText.innerHTML = `Confirm result: ${confirmStatus}`;
+        }
+        else {
+            outText.innerHTML = `Confirm result: ${confirmStatus}`;
+        }
+
+    });
+
+    safePromptBtn.addEventListener("click", () => {
+        let answer = DOMPurify.sanitize(prompt("What is your name?"));
+
+
+        if(answer == "") {
+            outText.innerHTML = `Prompt result: User did not enter anything`;
+        }
+        else if (answer == null) {
+            return;
+        } 
+        else {
+    //Inputting the name...which can output cross attacks
+    outText.innerHTML = `Prompt result: ${answer}`;
+        }
+
+    });
+
+    //CUSTOM DIALOG EVENT
+
+    alertBtnC.addEventListener("click", () => {
+
+        customDialogAlert.showModal();
+
+    });
+
+    confirmBtnC.addEventListener("click", () => {
+
+        customDialogConfirm.showModal();
+    });
+
+    promptBtnC.addEventListener("click", () => {
+
+        customDialogPrompt.showModal();
+});
+
+
+
+
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.min.js"></script>
+<script src="./customdialog.js"></script>
+</html>
