@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<title>CRUD</title>
+<link rel="stylesheet" href="crud.css">
+</head>
+<body>
+
+    <h1>Blog</h1>
+<section id="makeblogpost">
+    <form>
+
+            <label for="ptitle">Post Title</label><br>
+            <input required type="text" id="ptitle" name="ptitle"><br><br>
+            <label for="pdate">Date</label><br>
+            <input required type="date" id="pdate" name="pdate"><br><br>
+            <label for="psum">Post Summary</label><br>
+            <textarea required id="psum" name="psum" rows="4" cols="50">
+                </textarea><br><br>
+            <input required type="submit" value="Submit" id="submitBtn">
+
+
+
+    </form>
+
+</section>
+<hr>
+<section id="postsection">
+    <button id="clearBtn">Clear all Posts</button>
+<h2>Recent Posts</h2>
+
+<ul id="listofposts">
+
+</ul>
+
+
+</section>
+
+
+<script src="crud.js"></script>
+</body>
+
+
+
+</html>

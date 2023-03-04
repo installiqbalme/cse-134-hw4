@@ -1,0 +1,63 @@
+/* 
+The purpose of this css is to style the crud.html page
+*/
+:root {
+    --coolBack: #202020;
+    --shadow: 1px 1px 1px #333;
+    --white: #FFF;
+    --juicyPeachA: #FFECD2;
+    --niceBlue: #bfecf7;
+}
+body {
+    background-color: var(--coolBack);
+}
+
+h1 {
+    text-shadow: var(--shadow);
+    color: var(--white);
+    text-decoration: underline;
+    text-align: center;
+    font-size: 45px;
+    font-style: italic;
+}
+h2 {
+    text-shadow: var(--shadow);
+    color: var(--white);
+    text-decoration: underline;
+    text-align: center;
+    font-size: 35px;
+    font-style: italic;
+}
+
+#makeblogpost {
+    height: 100%;
+    width: 100%;
+    background-color: var(--juicyPeachA);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+
+}
+
+label {
+    font-weight: bold;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+ul li {
+    list-style-type: none;
+    background-color: var(--niceBlue);
+    border-radius: 25px;
+
+}
+
+div {
+    text-align: center;
+    
+}
