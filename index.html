@@ -12,7 +12,6 @@
 <body>
 <main>
 
-
     <section id="intro-container">
         <header>
             <h1 id="alex-header">Alex Iqbal</h1>
@@ -46,6 +45,9 @@
                 List out
                 my experience in the tech industry and to demonstrate meaningful projects.
             </p>
+
+            <button id="boldbutton">Bold Text (Toggle)</button><br><br>
+            <button id="changeintrocolors">Change Colors</button>
 
         </header>
     </section>
@@ -153,14 +155,17 @@
     <li>
         My favorite canvas:
         <br>
-        <canvas id="circle" class="intro" width="200" height="100"></canvas>
+        <canvas id="circle" class="intro" width="200" height="100"></canvas><br>
+        <button id="transBtn">Translate</button>
+
     </li>
     <li>
         My favorite SVG:
         <br>
         <svg id="star" width="200" height="200">
             <polygon points="100,15 40,250 190,90 15,90 160,250" />
-        </svg>
+        </svg><br>
+
     </li>
   </ul>
 
@@ -232,13 +237,8 @@
         <p>Class: CSE 134</p>
 
 </footer>
-<script>
-    var circleId = document.getElementById("circle");
-    var circleDraw = circleId.getContext("2d");
-    circleDraw.beginPath();
-    circleDraw.arc(95,50,40,0,2*Math.PI);
-    circleDraw.stroke();
-    </script>
+
+    <script src="index.js"></script>
 </body>
 
 

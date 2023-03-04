@@ -196,5 +196,18 @@ li {
     flex-direction: column;
 }
 
+button {
+    border-radius: 15px;
+    height: 5em;
+    width: 7.50em;
+    background-color: #FFF;
+}
+
+#circle {
+    position: relative;
+}
+
+
+
 
 
